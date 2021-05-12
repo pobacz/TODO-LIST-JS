@@ -34,27 +34,31 @@
 
         const missionsList = document.querySelector(".js-missionsList");
         missionsList.innerHTML = displayMissions;
-
-        const form = document.querySelector(".js-form");
-
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const newMission = document.querySelector(".js-newMission").value.trim();
-
-            if (newMission === "") {
-                return;
-            }
-
-           addMission(newMission);
-
-        });
     };
+
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const newMission = document.querySelector(".js-newMission").value.trim();
+
+        if (newMission === "") {
+            return;
+        }
+
+       addMission(newMission);
+
+    }
 
 
     const init = () => {
         render();
+
+        const form = document.querySelector(".js-form");
+
+        form.addEventListener("submit", onFormSubmit);
     };
 
+    
     init();
 };
