@@ -7,6 +7,11 @@
         render();
     };
 
+    const switchDone = (index) => {
+        missions[index].done = !missions[index].done;
+        render();
+    };
+
 
     const render = () => {
         let displayMissions = "";
@@ -14,13 +19,15 @@
         for (const mission of missions) {
             displayMissions +=
             `<li>
-                <button class="js-remove">Remove</button> ${mission.content}
+                <button class="js-done">Mark as done</button>
+                ${mission.content}
+                <button class="js-remove">Remove</button>
             </li>
             `;
         }
 
         const missionsList = document.querySelector(".js-missionsList");
-        
+
         missionsList.innerHTML = displayMissions;
 
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -29,7 +36,14 @@
             removeButton.addEventListener("click", () => {
                 deleteMission(index);
             });
+        });
 
+        const switchDoneButtons = document.querySelectorAll(".js-done");
+
+        switchDoneButtons.forEach((switchDoneButton, index) => {
+            switchDoneButton.addEventListener("click", () => {
+                switchDone(index);
+            });
         });
 
     };
