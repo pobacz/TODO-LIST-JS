@@ -1,22 +1,9 @@
 {
-    const missions = [
-        {
-            content: "wash a car",
-            done: false,
-        },
-        {
-            content: "buy a coffe",
-            done: true,
-        },
-    ];
+    const missions = [];
 
 
-    const addMission = (newMission) => {
-        missions.push(
-            {
-                content:newMission,
-            }
-        );
+    const deleteMission = (index) => {
+        missions.splice(index, 1);
         render();
     };
 
@@ -27,13 +14,34 @@
         for (const mission of missions) {
             displayMissions +=
             `<li>
-                ${mission.content}
+                <button class="js-remove">Remove</button> ${mission.content}
             </li>
             `;
         }
 
         const missionsList = document.querySelector(".js-missionsList");
+        
         missionsList.innerHTML = displayMissions;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                deleteMission(index);
+            });
+
+        });
+
+    };
+
+
+    const addMission = (newMission) => {
+        missions.push(
+            {
+                content: newMission,
+            }
+        );
+        render();
     };
 
 
@@ -46,19 +54,18 @@
             return;
         }
 
-       addMission(newMission);
-
-    }
+        addMission(newMission);
+    };
 
 
     const init = () => {
-        render();
+        // render();
 
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
     };
 
-    
+
     init();
 };
