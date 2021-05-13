@@ -7,10 +7,22 @@
         render();
     };
 
+
     const switchDone = (index) => {
         missions[index].done = !missions[index].done;
         render();
     };
+
+
+    const addMission = (newMission) => {
+        missions.push(
+            {
+                content: newMission,
+            }
+        );
+        render();
+    };
+
 
     const addEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -53,14 +65,15 @@
     };
 
 
-    const addMission = (newMission) => {
-        missions.push(
-            {
-                content: newMission,
-            }
-        );
-        render();
-    };
+    const newMissionElement = document.querySelector(".js-newMission");
+
+    const clearElement = () => {
+        newMissionElement.value = "";
+    }
+
+    const applyFocus = () => {
+        newMissionElement.focus();
+    }
 
 
     const onFormSubmit = (event) => {
@@ -68,20 +81,21 @@
 
         const newMission = document.querySelector(".js-newMission").value.trim();
 
-        if (newMission === "") {
-            return;
+        if (newMission !== "") {
+            addMission(newMission);
+            clearElement();
+            applyFocus();
         }
-
-        addMission(newMission);
     };
 
 
     const init = () => {
-        // render();
 
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
+
+
     };
 
 
