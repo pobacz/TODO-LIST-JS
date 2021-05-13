@@ -44,21 +44,21 @@
 
 
     const render = () => {
-        let displayMissions = "";
+        let missionDisplay = "";
 
         for (const mission of missions) {
-            displayMissions +=
+            missionDisplay +=
             `<li>
-                <button class="js-done">Mark as done</button>
+                <button class="js-done">✔️</button>
                     ${mission.content}
-                <button class="js-remove">Remove</button>
+                <button class="js-remove">🗑</button>
             </li>
             `;
         }
 
         const missionsList = document.querySelector(".js-missionsList");
 
-        missionsList.innerHTML = displayMissions;
+        missionsList.innerHTML = missionDisplay;
 
         addEvents();
 
@@ -69,11 +69,11 @@
 
     const clearElement = () => {
         newMissionElement.value = "";
-    }
+    };
 
     const applyFocus = () => {
         newMissionElement.focus();
-    }
+    };
 
 
     const onFormSubmit = (event) => {
@@ -84,8 +84,8 @@
         if (newMission !== "") {
             addMission(newMission);
             clearElement();
-            applyFocus();
         }
+        applyFocus();
     };
 
 
@@ -94,8 +94,6 @@
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
-
-
     };
 
 
