@@ -48,10 +48,10 @@
 
         for (const mission of missions) {
             missionDisplay +=
-            `<li>
-                <button class="js-done">✔️</button>
+            `<li class="list__item${mission.done ? " list__item--important" : ""}" >
+                <button class="list__button list__button--done js-done">✔</button>
                     ${mission.content}
-                <button class="js-remove">🗑</button>
+                <button class="list__button list__button--remove js-remove">🗑</button>
             </li>
             `;
         }
