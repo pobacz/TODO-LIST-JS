@@ -48,8 +48,8 @@
 
         for (const mission of missions) {
             missionDisplay +=
-            `<li class="list__item${mission.done ? " list__item--important" : ""}" >
-                <button class="list__button list__button--done js-done">✔</button>
+            `<li class="list__item${mission.done ? " list__item--important" : ""}">
+                <button class="list__button list__button--done js-done">${mission.done ? "✔" : ""}</button>
                     ${mission.content}
                 <button class="list__button list__button--remove js-remove">🗑</button>
             </li>
@@ -84,6 +84,7 @@
         if (newMission !== "") {
             addMission(newMission);
             clearElement();
+            
         }
         applyFocus();
     };
