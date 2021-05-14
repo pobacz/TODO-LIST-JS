@@ -1,9 +1,8 @@
 # Todo list app
 Manageable todo app with add, delete and mark as done features.
-The aim of the project is to understand and learn JS, CSS Grid and Flexbox layout  
+The aim of the project is to understand and learn JS, CSS Grid and Flexbox layout.
+Live demo [here](https://pobacz.github.io/todo-list-js/) 
  
-## Demo
-[Todo list](https://)
 
 ## Table of contents
  - [How to use](#how-to-use)
@@ -11,7 +10,6 @@ The aim of the project is to understand and learn JS, CSS Grid and Flexbox layou
  - [Sources](#sources)
  - [Status](#status)
  - [Contact](#contact)
-
 
 
 ## How to use
@@ -30,11 +28,14 @@ The aim of the project is to understand and learn JS, CSS Grid and Flexbox layou
 - ES6+
 - BEM
 
+
 ## Sources
 This app is inspired by *YouCode* tutorial - Simple task list in JS
 
+
 ## Status
 Project is in progress
+
 
 ## Contact
 If you wish to contact me, you can reach me at paobacz@gmail.com
