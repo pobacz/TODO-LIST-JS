@@ -1,5 +1,6 @@
 # Todo list app
 Manageable todo app with add, delete and mark as done features.
+The aim of the project is to understand and learn JS, CSS Grid and Flexbox layout  
  
 ## Demo
 [Todo list](https://google.com)
@@ -17,17 +18,15 @@ Manageable todo app with add, delete and mark as done features.
 
 ## How to use
 1. Type in your task
-2. Press **Add task** to find it in task list section below
+2. Press **Add task** to find it in a task list section below 
 3. If task is completed mark it by pressing the green button
 4. Remove task by pressing the red button (completed or not)
-
-
 
 ## Technologies used
 - HTML
 - CSS
 - ES6+
-- FLEX
+- FLEXBOX
 - GRID
 - BEM
 
