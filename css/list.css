@@ -27,6 +27,14 @@
     background-color: #008000;
 }
 
+.list__button--done:active {
+    outline: 1px solid #000;
+}
+
 .list__button--remove {
     background-color: #e61212;
+}
+
+.list__button--remove:active {
+    outline: 1px solid #000;
 }
