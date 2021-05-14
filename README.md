@@ -5,8 +5,6 @@ The aim of the project is to understand and learn JS, CSS Grid and Flexbox layou
 ## Demo
 [Todo list](https://google.com)
 
----
-
 ## Table of contents
  - [How to use](#how-to-use)
  - [Technologies used](#technologies-used)
@@ -25,9 +23,9 @@ The aim of the project is to understand and learn JS, CSS Grid and Flexbox layou
 ## Technologies used
 - HTML
 - CSS
+  - FLEXBOX
+  - GRID
 - ES6+
-- FLEXBOX
-- GRID
 - BEM
 
 ## Sources
