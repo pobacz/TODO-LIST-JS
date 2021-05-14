@@ -44,10 +44,10 @@
 
 
     const render = () => {
-        let missionDisplay = "";
+        let missionsHtml = "";
 
         for (const mission of missions) {
-            missionDisplay +=
+            missionsHtml +=
 
             `<li class="list__item">
                 <button class="list__button list__button--done js-done">${mission.done ? "✔" : ""}</button>
@@ -61,7 +61,7 @@
 
         const missionsList = document.querySelector(".js-missionsList");
 
-        missionsList.innerHTML = missionDisplay;
+        missionsList.innerHTML = missionsHtml;
 
         addEvents();
 
