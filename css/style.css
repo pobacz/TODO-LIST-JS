@@ -17,3 +17,16 @@ body {
 button {
     cursor: pointer;
 }
+
+.flex {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-column-gap: 30px;
+    border: 1px solid #ddd;
+
+}
+
+.hideButton{
+    border: none;
+    background: none;
+}
